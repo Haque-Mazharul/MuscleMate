@@ -1,3 +1,3 @@
 # MuscleMate
 
-hello this is m
+We Are Making This Project For Smart India Hackathon
