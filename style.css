@@ -1,0 +1,523 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+body{
+    background-color: #010302;
+    margin :0;
+    font-family: 'Josefin Sans', sans-serif;    font-size: 15px;
+    overflow-x: hidden;
+}
+
+*::-webkit-scrollbar{
+    width: 0;
+}
+.container{
+    overflow: hidden;
+    height: max-content;
+
+}
+.banner{
+    height: 50vw;
+    position: relative;
+    overflow: hidden;
+}
+.banner .bg{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-size: 100%;
+    background-position: center bottom;
+    transition: 0.1s;
+}
+.banner .bg:nth-child(1){
+    background-image: url(banner_0.png);
+}
+.banner .bg:nth-child(2){
+    background-image: url(banner_1.png);
+}
+.banner .bg:nth-child(3){
+    top: 32%;
+    text-align: center;
+} 
+.banner .bg:nth-child(3) h1, 
+.banner .bg:nth-child(3) h5
+{
+    color: #d1c3ae;
+    font-size: 50px;
+    margin: 0;
+ position: absolute;
+    top: 10px;
+    left: 200px;
+    text-shadow: 0 0px 20px #d2af76;
+}
+.banner .bg:nth-child(3) h5{
+    position: absolute;
+    top:-50px ;
+    left: 290px;
+}
+.banner .bg:nth-child(3) h1
+{
+    font-size: 11vw;
+}
+.banner .bg:nth-child(4){
+    background-image: url(banner_2.png);
+}
+.banner .bg:nth-child(5){
+    background-image: url(banner_3.png);
+}
+.tab{
+    min-height: 100vh;
+    background-color: #010302;
+    z-index: 1;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.tab::before{
+    position: absolute;
+    height: 200px;
+    width: 100vw;
+    background: linear-gradient(
+        to top, #010302, transparent
+    );
+    content: '';
+    bottom: 100%;
+    left: 0;
+}
+.tab.tab1{
+    background:linear-gradient(
+        to top, #010302 0%,transparent 20% , #010302 80%
+   ),url(tab1.jpg);
+   
+}
+.tab.tab2{
+    background:linear-gradient(
+        to top, #010302 0%, transparent 20% , #010302 80%
+   ),url(tab2.jpg);
+}
+.tab.tab1 .content{
+    width: 700px;
+    max-width: 90%;
+    color: #eee;
+}
+.tab.tab2 .content{
+    color: #eee;
+    width: 900px;
+    max-width: 90%;
+}
+.tab.tab2 .content .des{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.box{
+    position: relative;
+    height: 300px;
+    width: 300px;
+    background: #1c1c1c;
+    border-radius: 8px;
+overflow: hidden;
+
+left: -130px;
+}
+.box::before{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+     width: 380px;
+    height: 420px;
+    background: linear-gradient(0deg,transparent,transparent,#45f3ff,#45f3ff,#45f3ff);  
+    z-index: 1;
+    transform-origin: bottom right;
+   animation: animate 5s linear infinite; 
+
+}
+@keyframes animate{
+    0%{
+transform: rotate(0deg);
+    }
+    100%{
+transform: rotate(360deg);
+    }
+}
+.box::after{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+     width: 300px;
+    height: 300px;
+    background: linear-gradient(0deg,transparent,transparent,#45f3ff,#45f3ff,#45f3ff);  
+    z-index: 1;
+    transform-origin: bottom right;
+   animation: animate 5s linear infinite; 
+animation-delay: -2.5s;
+}
+@keyframes animate{
+    0%{
+transform: rotate(0deg);
+    }
+    100%{
+transform: rotate(360deg);
+    }
+}
+.borderline{
+    position: absolute;
+    top: 0;
+    inset: 0;
+}
+.borderline::before{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+     width: 300px;
+    height: 300px;
+    background: linear-gradient(0deg,transparent,transparent,#ff2770,#ff2770,#ff2770);  
+    z-index: 1;
+    transform-origin: bottom right;
+   animation: animate 5s linear infinite; 
+   animation-delay: -6s;
+}
+@keyframes animate{
+    0%{
+transform: rotate(0deg);
+    }
+    100%{
+transform: rotate(360deg);
+    }
+}
+.borderline::after{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+     width: 300px;
+    height: 300px;
+    background: linear-gradient(0deg,transparent,transparent,#ff2770,#ff2770,#ff2770);  
+    z-index: 1;
+    transform-origin: bottom right;
+   animation: animate 5s linear infinite; 
+   animation-delay: -3.5s;
+}
+.box form{
+    position: absolute;
+    inset: 4px;
+    background: #222;
+    padding: 50px 40px;
+    border-radius: 8px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+}
+.box form h2{
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    position: absolute;
+   top: 0px;
+   left: 110px;
+}
+.inputBox{
+    position: relative;
+    width: 300px;
+    margin-top: 35px;
+}
+.box2{
+    position: relative;
+    height: 300px;
+    width: 300px;
+    background: #1c1c1c;
+    border-radius: 8px;
+overflow: hidden;
+left: 200px;
+top: -300px;
+}
+.box2::before{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+     width: 380px;
+    height: 420px;
+    background: linear-gradient(0deg,transparent,transparent,#45f3ff,#45f3ff,#45f3ff);  
+    z-index: 1;
+    transform-origin: bottom right;
+   animation: animate 5s linear infinite; 
+
+}
+@keyframes animate{
+    0%{
+transform: rotate(0deg);
+    }
+    100%{
+transform: rotate(360deg);
+    }
+}
+.box2::after{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+     width: 300px;
+    height: 300px;
+    background: linear-gradient(0deg,transparent,transparent,#45f3ff,#45f3ff,#45f3ff);  
+    z-index: 1;
+    transform-origin: bottom right;
+   animation: animate 5s linear infinite; 
+animation-delay: -2.5s;
+}
+@keyframes animate{
+    0%{
+transform: rotate(0deg);
+    }
+    100%{
+transform: rotate(360deg);
+    }
+}
+.borderline{
+    position: absolute;
+    top: 0;
+    inset: 0;
+}
+.borderline::before{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+     width: 300px;
+    height: 300px;
+    background: linear-gradient(0deg,transparent,transparent,#ff2770,#ff2770,#ff2770);  
+    z-index: 1;
+    transform-origin: bottom right;
+   animation: animate 5s linear infinite; 
+   animation-delay: -6s;
+}
+@keyframes animate{
+    0%{
+transform: rotate(0deg);
+    }
+    100%{
+transform: rotate(360deg);
+    }
+}
+.borderline::after{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+     width: 300px;
+    height: 300px;
+    background: linear-gradient(0deg,transparent,transparent,#ff2770,#ff2770,#ff2770);  
+    z-index: 1;
+    transform-origin: bottom right;
+   animation: animate 5s linear infinite; 
+   animation-delay: -3.5s;
+}
+.box2 form{
+    position: absolute;
+    inset: 4px;
+    background: #222;
+    padding: 50px 40px;
+    border-radius: 8px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+}
+.box2 form h2{
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+  position: absolute;
+   top: 0px;
+   left: 110px;
+    
+}
+.inputBox{
+    position: relative;
+    width: 300px;
+    margin-top: 35px;
+}
+.box3{
+    position: relative;
+    height: 300px;
+    width: 300px;
+    background: #1c1c1c;
+    border-radius: 8px;
+overflow: hidden;
+top: -600px;
+left: 530px;
+}
+.box3::before{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+     width: 380px;
+    height: 420px;
+    background: linear-gradient(0deg,transparent,transparent,#45f3ff,#45f3ff,#45f3ff);  
+    z-index: 1;
+    transform-origin: bottom right;
+   animation: animate 5s linear infinite; 
+
+}
+@keyframes animate{
+    0%{
+transform: rotate(0deg);
+    }
+    100%{
+transform: rotate(360deg);
+    }
+}
+.box3::after{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+     width: 300px;
+    height: 300px;
+    background: linear-gradient(0deg,transparent,transparent,#45f3ff,#45f3ff,#45f3ff);  
+    z-index: 1;
+    transform-origin: bottom right;
+   animation: animate 5s linear infinite; 
+animation-delay: -2.5s;
+}
+@keyframes animate{
+    0%{
+transform: rotate(0deg);
+    }
+    100%{
+transform: rotate(360deg);
+    }
+}
+.borderline{
+    position: absolute;
+    top: 0;
+    inset: 0;
+}
+.borderline::before{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+     width: 300px;
+    height: 300px;
+    background: linear-gradient(0deg,transparent,transparent,#ff2770,#ff2770,#ff2770);  
+    z-index: 1;
+    transform-origin: bottom right;
+   animation: animate 5s linear infinite; 
+   animation-delay: -6s;
+}
+@keyframes animate{
+    0%{
+transform: rotate(0deg);
+    }
+    100%{
+transform: rotate(360deg);
+    }
+}
+.borderline::after{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+     width: 300px;
+    height: 300px;
+    background: linear-gradient(0deg,transparent,transparent,#ff2770,#ff2770,#ff2770);  
+    z-index: 1;
+    transform-origin: bottom right;
+   animation: animate 5s linear infinite; 
+   animation-delay: -3.5s;
+}
+.box3 form{
+    position: absolute;
+    inset: 4px;
+    background: #222;
+    padding: 50px 40px;
+    border-radius: 8px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+}
+.box3 form h2{
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+  position: absolute;
+   top: 0px;
+   left: 110px;
+}
+.inputBox{
+    position: relative;
+    width: 300px;
+    margin-top: 35px;
+}
+.img1{
+    background: url("Basketball-removebg-preview.png");
+    background-size: cover;
+    height: 250px;
+    width: 250px;
+    position: absolute;
+   top: 7   0px;
+left: 20px;
+    opacity: 1;
+}
+
+.img2{
+    background: url("Avocados-3d84a3a-removebg-preview.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 250px;
+    width: 300px;
+    position:absolute;
+    left: 0px;
+    top: 70px;
+   
+}
+
+.img3{
+    background: url("360_F_268202443_KkdJz3xUEFXlMYhdUMn1yh77c2a6jt6u-removebg-preview.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 250px;
+    width: 450px;
+    position: absolute;
+    left: -75px;
+    top: 120px;
+   
+}
+
+.btn {
+  font-size: 1.2rem;
+  padding: 1rem 2.5rem;
+ position: absolute;
+ left: 40%;
+ top: 60%;
+  border: none;
+  outline: none;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  background-color: rgb(14, 14, 26);
+  color: rgb(234, 234, 234);
+  font-weight: 700;
+  transition: 0.6s;
+  box-shadow: 0px 0px 60px #1f4c65;
+  -webkit-box-reflect: below 10px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.4));
+}
+
+.btn:active {
+  scale: 0.92;
+}
+
+.btn:hover {
+  background: rgb(2,29,78);
+  background: linear-gradient(270deg, rgba(2, 29, 78, 0.681) 0%, rgba(31, 215, 232, 0.873) 60%);
+  color: rgb(4, 4, 38);
+}
